@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head.ejs')%>
+	</head>
+	<body>
+		<div class="container">
+			<h1><%=budget.name%></h1>
+			<table>
+				<tr>
+					<th>Date</th>
+					<th>Name</th>
+					<th>From</th>
+					<th>Amount</th>
+					<th>Tags</th>
+				</tr>
+
+				<tr>
+					<td><%=budget.date%></td>
+					<td><%=budget.name%></td>
+					<td><%=budget.from%></td>
+					<td><%=budget.amount%></td>
+					<td><%=budget.tags%></td>
+				</tr>
+            </table>
+            <button><a href="/budgets">BACK</a></button>
+		</div>
+	</body>
+</html>

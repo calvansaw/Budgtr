@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head.ejs')%>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Budgtr ALL</h1>
+			<h3 class="<%=color%>">Bank Account: <%=total%></h3>
+			<table>
+				<tr>
+					<th>Date</th>
+					<th>Name</th>
+					<th>Amount</th>
+				</tr>
+				<%allBudgets.forEach((item, index) => {%>
+				<tr>
+					<td><%=item.date%></td>
+					<td><a href="/budgets/<%=index%>"><%=item.name%></a></td>
+					<td><%=item.amount%></td>
+				</tr>
+				<%});%>
+			</table>
+			<button><a href="/budgets/new">Create New Items</a></button>
+		</div>
+	</body>
+</html>
